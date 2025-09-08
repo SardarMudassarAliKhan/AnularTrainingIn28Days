@@ -1,1 +1,9 @@
-<p>childcomponent works!</p>
+<h1>Parent data sent to child</h1>
+<ul>
+  <li *ngFor="let item of ArraydataFromParent">
+    {{ item.id }}: {{ item.name }} - {{ item.age }}
+  </li>
+</ul>
+<h4>{{ parentMessage }}</h4>
+<h4>Message from Child: {{ parentMessage2 }}</h4>
+<button (click)="sendDataToParent()">Send Data to Parent</button>

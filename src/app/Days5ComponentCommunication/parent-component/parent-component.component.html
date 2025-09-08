@@ -1,1 +1,19 @@
+<h2>Child Component Data in Parent Component</h2>
+<ul>
+  <li *ngFor="let item of ChilddataFromParent">
+    {{ item["Child of Mudassar " + item.id] }} - {{ item.age }}
+  </li>
+</ul>
+<h4>Data 2</h4>
+<ul>
+  <li *ngFor="let item of ChilddataFromParent2">
+    {{ item["Child of Mudassar " + item.id] }} - {{ item.age }}
+  </li>
+</ul>
+<app-childcomponent 
+  [parentMessage]="MyMessageForMyChild"
+  [parentMessage2]="MyMessageForMyChild2"
+  [ArraydataFromParent]="sendDataToChild()" 
+  (messageEvent)="receiveDataFromChild($event)">
+</app-childcomponent>
 
