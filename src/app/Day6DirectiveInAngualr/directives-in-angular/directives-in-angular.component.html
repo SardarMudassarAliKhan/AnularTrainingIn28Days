@@ -1,0 +1,16 @@
+<div *ngIf="isLoggedIn; else loggedOut">
+  <h2>Welcome back!</h2>
+  <p>Your favorite fruits are:</p>
+  <ul>
+    <li *ngFor="let fruit of fruits">{{ fruit }}</li>
+  </ul>
+</div>
+
+<button (click)="toggleActive()" [ngClass]="isActive ? 'active' : 'inactive'">
+  {{ isActive ? 'Active' : 'Inactive' }} </button>
+
+<P [ngStyle]="{'color': isActive ? 'green' : 'red' }">Toggle the button to change its state.</P>
+
+<ng-template #loggedOut>
+  <h2>Please log in</h2>
+</ng-template>
