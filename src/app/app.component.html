@@ -1,1 +1,14 @@
+<form ngNativeValidate #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+    <h2>Template Driven Form Example</h2>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ngModel required appBgColor="lightblue">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ngModel required appBgColor="lightgreen">
+    </div>
+    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+
+</form>
 <app-parent-component-Day7ViewChildVariable></app-parent-component-Day7ViewChildVariable>

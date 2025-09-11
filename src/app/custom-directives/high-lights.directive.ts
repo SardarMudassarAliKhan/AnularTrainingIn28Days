@@ -23,4 +23,6 @@ export class HighLightsDirective {
     this.el.nativeElement.style.backgroundColor = color;
   }
 
+  
+
 }
