@@ -3,10 +3,11 @@ import { ParentComponentComponent } from './Day7ViewChildVariable/parent-compone
 import { BgColorDirective } from './custom-directives/bg-color.directive';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsComponent } from "./Day10ReactiveFormsInAngular/reactive-forms/reactive-forms.component";
+import { CustomValidationsInAngularComponent } from './Day11CustomValidationInRForms/custom-validations-in-angular/custom-validations-in-angular.component';
 
 @Component({
   selector: 'app-root',
-  imports: [ParentComponentComponent, FormsModule, ReactiveFormsComponent],
+  imports: [ParentComponentComponent, FormsModule, ReactiveFormsComponent,CustomValidationsInAngularComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
